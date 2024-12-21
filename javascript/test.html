@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Hello Test Page updated</title>
+    </head>
+    <body>
+        <h1 id="header"> Welcome ! </h1>
+        <button id="changeText"> Click here </button>
+    </body>
+    <script>
+        const header = document.getElementById("header");
+        const button = document.getElementById("changeText");
+        button.addEventListener("click", function(){
+            header.textContent= "Changed Text of Header !";
+        });
+    </script>
+</html>
