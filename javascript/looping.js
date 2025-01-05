@@ -1,10 +1,37 @@
-const arrayVal = [1,2,3,4,5,6,7,8,9,10]
+//Recursive fun = Function calls itself
 
-
-for (let index = 0; index < arrayVal.length; index++) {
-    const element = arrayVal[index];
-    console.log(element)
+//0! = 1
+// 5! = 
+function factorial(n){
+    if(n == 0){
+        return 1;
+    }
+    return n * factorial(n-1)
 }
 
-console.log(arrayVal.length)
-console.log(arrayVal[0])
+const valueToTest = 110;
+
+//console.log("Factorial of", valueToTest, " is : ", factorial(valueToTest));
+
+
+//Higher Order fn = Argument is a function
+
+const add = (a,b) => a + b; 
+const sub = (a,b) => a - b;
+
+const val1 = 1;
+const val2 = 2;
+
+//console.log(add(val1, val2))
+//console.log(sub(val1, val2))
+
+function applyOperation(a, b, operation){
+    
+    return operation(a,b);
+}
+
+console.log(applyOperation(val1, val2, add))
+console.log(applyOperation(val1, val2, sub))
+
+
+//Currying
